@@ -20,7 +20,13 @@ class OrganisationTransformer extends TransformerAbstract
      */
     public function transform(Organisation $organisation): array
     {
-        return [];
+        return [
+            'name' => $organisation->name,
+            'trial_end' => $organisation->trial_end,
+            'created_at' => $organisation->created_at,
+            'is_subscribed' => $organisation->subscribed
+
+        ];
     }
 
     /**

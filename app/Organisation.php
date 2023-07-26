@@ -30,7 +30,18 @@ class Organisation extends Model
     /**
      * @var array
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'name',
+        'owner_user_id',
+        'trial_end',
+        'subscribed'
+    
+    ];
+
+    protected $casts = [
+        'created_at' => 'timestamp',
+        'trial_end' => 'timestamp'
+    ];
 
     /**
      * @var array
@@ -44,6 +55,12 @@ class Organisation extends Model
      */
     public function owner(): BelongsTo
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class,'owner_user_id');
     }
+
+
+
+
+
+
 }
