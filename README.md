@@ -33,3 +33,4 @@ This creates a user with the credentials: `test@test.com` / `password`
 
 - Laravel Passport
 - Fractal (for transformers)
+"# laravel_test" 
